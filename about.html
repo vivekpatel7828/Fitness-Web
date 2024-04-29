@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitness Web</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+  .navv {
+    /* background-color:darkolivegreen; */
+    background-color: #191e25;
+  }
+
+  .fit {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 26px;
+  }
+
+  .fit:hover {
+    color: rgb(255, 255, 255);
+
+  }
+
+  .nav_head {
+    color: aliceblue;
+    font-size: 18px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .nav_head:hover {
+    color: #F96D00;
+    font-size: 18px;
+  }
+
+  .form_search {
+    background-color: #ed8f47b5;
+    border-color: #222831;
+    /* padding: 3px 8px; */
+  }
+
+  .iconn {
+    background-color: rgb(255, 255, 255);
+    border-color: #222831;
+  }
+
+  .btn_logSign:hover {
+    background-color: #ed8f47b5;
+  }
+
+  div{
+    font-family: "Ubuntu", sans-serif;
+    /* font-weight: 500; */
+    font-style: normal;
+  }
+
+  body{
+    background-color: #2b2d30;
+  }
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 984px) {
+    .lls {
+      margin-top: .5rem !important;
+
+    }
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-lg navv ">
+    <div class="container-fluid ">
+      <a class="navbar-brand fit" href="#">Fitness Club</a>
+      <button class="navbar-toggler iconn" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon iconn"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link nav_head" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav_head" href="/about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <button class="btn dropdown-toggle btn-sm  nav-link nav_head" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav_head" href="/contact.html">Contact us</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 form_search" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+
+        <div class="mx-2 my-sm-2 lls">
+          <button class="btn btn-outline-secondary btn_logSign" data-bs-toggle="modal"
+            data-bs-target="#LoginModal">Login</button>
+          <button class="btn btn-outline-secondary btn_logSign" data-bs-toggle="modal"
+            data-bs-target="#SignUpModal">SignUp</button>
+
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="#LoginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="LoginModalLabel">Login to Fitness club</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+          <button type="button" class="btn btn-outline-secondary">Submit</button>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="SignUpModal" tabindex="-1" aria-labelledby="SignUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="SignUpModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                </div>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword2">
+            </div>
+
+
+            <!-- <button type="submit" class="btn btn-primary">Create Account</button> -->
+          <button type="button" class="btn btn-outline-secondary">Create Account</button>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-5">
+        <h2 class="featurette-heading fw-normal lh-1 text-light">Mental Health Benefits:</h2>
+          <p class="lead text-light">Exercise has been shown to have numerous mental health benefits, and the
+            gym provides a structured environment for individuals to engage in physical activity, which can help
+            alleviate
+            stress, improve mood, and boost self-esteem. Regular exercise at the gym can also promote better sleep
+            patterns and increase overall energy levels, contributing to a better quality of life.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=600" alt=""
+          srcset="">
+      </div>
+    </div>
+
+  </div>
+ 
+  <div class="container  my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-5 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1 text-light">Variety of Equipment and Programs:</h2>
+        <p class="lead text-light">Gyms typically offer a wide range of equipment and fitness
+          programs catering to different preferences and fitness levels. From cardio machines and free weights to group
+          classes such as yoga, spinning, or HIIT, there's something for everyone. This variety allows individuals to
+          tailor their workouts according to their goals and preferences.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          alt="" srcset="">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-5">
+        <h2 class="featurette-heading fw-normal lh-1 text-light">Community and Social Interaction:</h2>
+        <p class="lead text-light">Gyms serve as social hubs where people with similar fitness
+          goals come together, fostering a sense of community and camaraderie. Interacting with others who share similar
+          interests can motivate individuals to stay consistent with their exercise routines and make the gym experience
+          more enjoyable.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          src="https://images.pexels.com/photos/3838857/pexels-photo-3838857.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="" srcset="">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container  my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-5 order-md-2">
+        <h2 class="featurette-heading fw-normal lh-1 text-light">Physical Health:</h2>
+        <p class="lead text-light">The gym provides a conducive environment for individuals to engage in physical
+          exercise, contributing to their overall health and well-being. Regular workouts at the gym can improve
+          cardiovascular health, build strength and endurance, enhance flexibility, and help in weight management.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          src="https://images.pexels.com/photos/9171164/pexels-photo-9171164.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="" srcset="">
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container my-4">
+    <div class="row featurette d-flex justify-content-center align-items-center">
+      <div class="col-md-5">
+        <h2 class="featurette-heading fw-normal lh-1 text-light">Opportunities for Progression and Challenge:</h2>
+        <p class="lead text-light">Gyms offer a platform for individuals to continually challenge themselves and track their
+          progress over time. Whether it's increasing weights,
+          improving endurance, or mastering new workout techniques, the gym provides an environment where individuals
+          can set and achieve personal milestones.</p>
+      </div>
+      <div class="col-md-3">
+        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
+          src="https://images.pexels.com/photos/18060023/pexels-photo-18060023/free-photo-of-bodybuilder-working-out-on-weight-bench.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          alt="" srcset="">
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="container">
+    <footer class="py-3 my-4 bg-dark">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+      </ul>
+      <p class="text-center text-white">© 2024 Company, Inc</p>
+    </footer>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
